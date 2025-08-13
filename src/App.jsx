@@ -3,7 +3,8 @@ import './App.css'
 import Count from './component/Count'
 import Message from './component/Message'
 import Welcome from './component/Welcome'
-
+import Form from './component//Form'
+import List from './component/List'
 
 function App() {
   return (
@@ -84,11 +85,14 @@ function App() {
     // </div>
     
     // </>
-    <>
-  <Message/>
-  <Count/>
-    </>
-  
+  //   // <>
+  // {/* <Message/>
+  // <Count/> */}
+  //   {/* </> */}
+  <>
+     <Form/>
+     {/* <List/> */}
+  </>
   )
 }
 
