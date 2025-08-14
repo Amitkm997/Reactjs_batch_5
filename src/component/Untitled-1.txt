@@ -1,0 +1,10 @@
+
+
+let arr=[2,3,4,5]
+
+let user=[]
+user=[{name:"amit",
+email:"email@gmail.com"
+}]
+
+let newArray=[...arr,{}]

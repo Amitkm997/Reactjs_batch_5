@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import List from './List'
-
+import '../css/Form.css'
 export default function Form() {
     const[name,setName]=useState('')
     const[email,setEmail]=useState('')
@@ -20,15 +20,22 @@ export default function Form() {
        if(password==""){
         alert("please provide Password")
        }
-       
-      // let newUser={
-      //   name:name,
-      //   email:email,
-      //   password:password
-      // }
+      let newUser={
+        name:name,
+        email:email,
+        password:password
+      }
       // user.push({name,email,password})
-       setUser([...user,{name,email,password}])
+       setUser([...user,newUser])
+
+       setName("")
+       setEmail("")
+       setPassword("")
       //  alert("form submitted successfully")
+    }
+    function deleteUser(index){
+      let updatedUserTable=user.filter((cur,i)=>i!=index)
+      setUser(updatedUserTable)
     }
   return (
     <>
@@ -58,11 +65,36 @@ export default function Form() {
       Password:{password}
 
        <h1>List of all registered users</h1>
-       <ul>
+       {/* <ul>
         {
           user.map((cur)=><li>{cur.name}{"  "}{cur.email}</li>)
         }
-       </ul>
+       </ul> */}
+
+       <table>
+        {<>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Password</th>
+              <th>Operation</th>
+            </tr>
+          </thead>
+          <tbody>
+               {user.map((cur,index)=>(
+                <tr key={index}>
+                  <td>{cur.name}</td>
+                  <td>{cur.email}</td>
+                  <td>{cur.password}</td>
+                  <td><button onClick={()=>deleteUser(index)}>Delete</button></td>
+                </tr>
+               ))}
+          </tbody>
+        </>
+          
+        }
+       </table>
     </>
   )
 }

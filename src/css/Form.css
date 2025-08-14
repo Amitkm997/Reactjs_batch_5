@@ -1,0 +1,17 @@
+table{
+    width: 50%;
+    border-collapse: collapse;
+    /* margin-top: 2; */
+}
+
+thead{
+    background-color: azure;
+    color: black;
+}
+
+th,td{
+    border: 1px solid black;
+    padding: 12px;
+    text-align: center;
+}
+
