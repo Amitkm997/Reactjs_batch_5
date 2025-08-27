@@ -1,15 +1,13 @@
 import React from 'react'
 
 export default function List() {
-    let students=["Nishu","vicky","paras","ambika"]
+    let Student=["Nikhil","Viky","Sumit","Hement"]
   return (
-   <>
-      <h1>This is my list</h1>
-      <ul>
-      {
-        students.map((cur,index)=> <li key={index}>{cur}</li>)
-      }
-      </ul>
-   </>
+    <>
+    <ul>       {/* <li>{Student[0]}</li> */}
+       {Student.map((cur,index)=><li key={index}>{cur}</li>)}
+    </ul>
+      
+    </>
   )
 }

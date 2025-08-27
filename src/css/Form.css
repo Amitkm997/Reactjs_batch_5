@@ -1,11 +1,10 @@
 table{
     width: 50%;
-    border-collapse: collapse;
-    /* margin-top: 2; */
+    border-collapse: collapse;   margin-top: 2;
 }
 
 thead{
-    background-color: azure;
+    background-color: rgb(44, 218, 218);
     color: black;
 }
 
