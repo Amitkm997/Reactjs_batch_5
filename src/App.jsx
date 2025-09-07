@@ -16,26 +16,37 @@ import LiftStateUp from './component/LiftStateUp'
 import CounterProvider from './context/CounterContext'
 import CounterController from './controller/CounterController'
 import CounterDisplay from './controller/CounterDisplay'
+import FormUR from './component/FormUR'
+import useWindoWidth from './component/custumHook/UseWindow'
+import CounterCH from './component/custumHook/CounterCH'
+import UseMemo from './component/UseMemo'
 function App() {
+  const width=useWindoWidth();
   return (
     <>
-      {/* <Navbar />
+      <Navbar />
+       {/* <h1>Window width</h1>
+       <h1>{width}</h1>
+      <CounterCH/> */}
+     <UseMemo/>
       <Routes>
         <Route path='/form' element={<Form />} />
         <Route path='/list' element={<List />} />
         <Route path='/fetchData' element={<FetchData />} />
         <Route path='/lift' element={<LiftStateUp />} />
+        {/* nested routes  */}
         <Route path='/about' element={<About />}>
           <Route path='company' element={<Company />} ></Route>
           <Route path='team' element={<Team />} ></Route>
         </Route>
+        <Route path='/formUR' element={<FormUR/>}/>
         <Route path='*' element={<NotFound />} />
-      </Routes> */}
-      <CounterProvider>
+      </Routes>
+      {/* <CounterProvider>
         <h1>This thi Global Counter useing context</h1>
         <CounterController />
         <CounterDisplay />
-      </CounterProvider>
+      </CounterProvider> */}
     </>
   )
 }

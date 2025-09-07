@@ -9,6 +9,7 @@ export default function Navbar() {
         <Link to='/list'>List</Link>
         <Link to='/about'>About</Link>
         <Link to='/lift'>LiftStateUp</Link>
+        <Link to='/formUR'>FormUR</Link>
     </nav>
   )
 }
